@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXORA Fortune</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-    margin:0;
-    background:#0d0d0d;
-    color:white;
-    font-family:Arial,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
+    <title>NEXORA Fortune</title>
 
-.box{
-    width:90%;
-    max-width:400px;
-    text-align:center;
-    background:#171717;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(120,0,255,.35);
-}
+    <meta name="theme-color" content="#6f3cff">
 
-h1{
-    color:#8a5cff;
-}
-
-button{
-    margin-top:20px;
-    width:100%;
-    padding:16px;
-    border:none;
-    border-radius:12px;
-    background:#8a5cff;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-}
-
-#prediction{
-    margin-top:25px;
-    font-size:20px;
-    line-height:1.5;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="box">
+<div id="particles"></div>
 
-<h1>🔮 NEXORA Fortune</h1>
+<div class="background-glow"></div>
 
-<p>Получите своё предсказание на сегодня</p>
+<div class="container">
 
-<button onclick="fortune()">Получить предсказание</button>
+    <div class="logo">
+        🔮
+    </div>
 
-<div id="prediction"></div>
+    <h1>NEXORA Fortune</h1>
+
+    <p class="subtitle">
+        Открой карту и узнай,
+        что приготовил для тебя сегодняшний день.
+    </p>
+
+    <div class="deck">
+
+        <div class="card" id="fortuneCard">
+
+            <div class="card-front">
+
+                <div class="card-logo">
+
+                    ✨
+
+                </div>
+
+                <div class="card-title">
+
+                    NEXORA
+
+                </div>
+
+            </div>
+
+            <div class="card-back">
+
+                <div id="rarity"></div>
+
+                <div id="cardNumber"></div>
+
+                <div id="prediction"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="openCard">
+
+        Открыть карту
+
+    </button>
+
+    <button id="shareButton" class="hidden">
+
+        Поделиться
+
+    </button>
 
 </div>
 
-<script>
+<script src="predictions.js"></script>
 
-const list=[
-"💰 Сегодня ты найдёшь выгодный оффер.",
-"🚀 Самое время масштабироваться.",
-"📈 ROI превзойдёт ожидания.",
-"🤝 Скоро появится новое сотрудничество.",
-"🔥 Не бойся запускать тесты.",
-"💎 Большая возможность уже рядом.",
-"⚡ Сегодня удача на твоей стороне.",
-"🎯 Один правильный контакт всё изменит.",
-"📊 Время анализировать и расти.",
-"🏆 Сегодня отличный день для новых побед."
-];
-
-function fortune(){
-
-let random=Math.floor(Math.random()*list.length);
-
-document.getElementById("prediction").innerHTML=list[random];
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
