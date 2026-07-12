@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NEXORA Fortune</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#6f3cff">
+<title>NEXORA Fortune</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -19,62 +20,105 @@
 
 <div class="container">
 
-    <div class="logo">
-        🔮
-    </div>
+<div class="logo">
+🔮
+</div>
 
-    <h1>NEXORA Fortune</h1>
+<h1>NEXORA Fortune</h1>
 
-    <p class="subtitle">
-        Открой карту и узнай,
-        что приготовил для тебя сегодняшний день.
-    </p>
+<p class="subtitle">
+Каждый день открывай новую карту судьбы
+</p>
 
-    <div class="deck">
+<div class="top-info">
 
-        <div class="card" id="fortuneCard">
+<div class="info-box">
 
-            <div class="card-front">
+<div class="info-title">
+✨ Aura
+</div>
 
-                <div class="card-logo">
+<div id="auraValue">
+--
+</div>
 
-                    ✨
+</div>
 
-                </div>
+<div class="info-box">
 
-                <div class="card-title">
+<div class="info-title">
+🔥 Streak
+</div>
 
-                    NEXORA
+<div id="streakValue">
+0
+</div>
 
-                </div>
+</div>
 
-            </div>
+<div class="info-box">
 
-            <div class="card-back">
+<div class="info-title">
+🏆 Level
+</div>
 
-                <div id="rarity"></div>
+<div id="levelValue">
+Explorer
+</div>
 
-                <div id="cardNumber"></div>
+</div>
 
-                <div id="prediction"></div>
+</div>
 
-            </div>
+<div class="deck">
 
-        </div>
+<div class="card" id="fortuneCard">
 
-    </div>
+<div class="card-front">
 
-    <button id="openCard">
+<div class="card-logo">
 
-        Открыть карту
+✨
 
-    </button>
+</div>
 
-    <button id="shareButton" class="hidden">
+<div class="card-title">
 
-        Поделиться
+NEXORA
 
-    </button>
+</div>
+
+</div>
+
+<div class="card-back">
+
+<div id="rarity"></div>
+
+<div id="cardTitle"></div>
+
+<div id="category"></div>
+
+<div id="cardNumber"></div>
+
+<div id="prediction"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<button id="openCard">
+
+Открыть карту
+
+</button>
+
+<button id="shareButton" class="hidden">
+
+Поделиться
+
+</button>
 
 </div>
 
@@ -83,4 +127,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
