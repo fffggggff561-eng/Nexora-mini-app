@@ -48,7 +48,11 @@ const button = document.getElementById("openCard");
 const share = document.getElementById("shareButton");
 
 let opened = Number(localStorage.getItem("openedCards") || 0);
+const today = new Date().toDateString();
 
+let streak = Number(localStorage.getItem("streak") || 0);
+
+const lastVisit = localStorage.getItem("lastVisit");
 function updateLevel() {
 
     let level = "Explorer";
