@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>NEXORA Fortune</title>
+
+<meta name="theme-color" content="#6f3cff">
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,11 +15,13 @@
 
 <body>
 
+<div class="background"></div>
+<div class="background-glow"></div>
 <div id="particles"></div>
 
-<div class="background-glow"></div>
-
 <div class="container">
+
+<header class="header">
 
 <div class="logo">
 🔮
@@ -27,105 +30,197 @@
 <h1>NEXORA Fortune</h1>
 
 <p class="subtitle">
-Каждый день открывай новую карту судьбы
+Open your destiny card
 </p>
 
-<div class="top-info">
+</header>
 
-<div class="info-box">
+<section class="stats">
 
-<div class="info-title">
+<div class="stat-card">
+
+<div class="stat-name">
 ✨ Aura
 </div>
 
-<div id="auraValue">
+<div class="stat-value" id="auraValue">
 --
 </div>
 
 </div>
 
-<div class="info-box">
+<div class="stat-card">
 
-<div class="info-title">
+<div class="stat-name">
 🔥 Streak
 </div>
 
-<div id="streakValue">
+<div class="stat-value" id="streakValue">
 0
 </div>
 
 </div>
 
-<div class="info-box">
+<div class="stat-card">
 
-<div class="info-title">
+<div class="stat-name">
 🏆 Level
 </div>
 
-<div id="levelValue">
+<div class="stat-value" id="levelValue">
 Explorer
 </div>
 
 </div>
 
-</div>
+</section>
+
+<section class="reward hidden" id="dailyReward">
+
+🎁 Daily Reward
+
+</section>
 
 <div class="deck">
 
 <div class="card" id="fortuneCard">
 
-<div class="card-front">
+<div class="card-face card-front">
 
-<div class="card-logo">
+<div class="front-logo">
 
-✨
+🔮
 
 </div>
 
-<div class="card-title">
+<div class="front-title">
 
 NEXORA
 
 </div>
 
-</div>
+<div class="front-text">
 
-<div class="card-back">
-
-<div id="rarity"></div>
-
-<div id="cardTitle"></div>
-
-<div id="category"></div>
-
-<div id="cardNumber"></div>
-
-<div id="prediction"></div>
+Tap to discover your destiny
 
 </div>
 
 </div>
 
+<div class="card-face card-back">
+
+<div id="secretBadge" class="secret hidden">
+
+💎 SECRET
+
 </div>
+
+<div id="rarity">
+
+⭐⭐
+
+</div>
+
+<div id="cardTitle">
+
+The Scale
+
+</div>
+
+<div id="category">
+
+Affiliate
+
+</div>
+
+<div id="prediction">
+
+Prediction
+
+</div>
+
+<div id="cardNumber">
+
+Card #001
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="buttons">
 
 <button id="openCard">
 
-Открыть карту
+🔮 Open Card
 
 </button>
 
 <button id="shareButton" class="hidden">
 
-Поделиться
+📤 Share
 
 </button>
 
 </div>
 
-<script src="predictions.js"></script>
+<section class="collection">
 
+<div class="collection-title">
+
+Statistics
+
+</div>
+
+<div class="collection-grid">
+
+<div class="collection-box">
+
+<div class="collection-number" id="openedCards">
+0
+</div>
+
+<div class="collection-label">
+Opened
+</div>
+
+</div>
+
+<div class="collection-box">
+
+<div class="collection-number" id="legendaryCount">
+0
+</div>
+
+<div class="collection-label">
+Legendary
+</div>
+
+</div>
+
+<div class="collection-box">
+
+<div class="collection-number" id="secretCount">
+0
+</div>
+
+<div class="collection-label">
+Secret
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="predictions.js"></script>
 <script src="script.js"></script>
 
 </body>
-
 </html>
